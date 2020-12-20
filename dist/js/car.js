@@ -1,7 +1,15 @@
 // Lambo Page
 const loadText = document.querySelector('.loading-text');
 const showcase = document.querySelector('.showcase');
+const showcaseContent = document.querySelector('.showcase-content');
 const items = document.querySelectorAll('.item');
+
+// Show showcase content 
+setTimeout(showContent, 3000);
+
+function showContent() {
+  showcaseContent.classList.add('show');
+}
 
 // Showcase blur / loading 
 let load = 0;

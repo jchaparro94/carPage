@@ -49,32 +49,9 @@ img {
 
 .car-page-body {
   background-color: #333; }
-  .car-page-body nav {
-    position: fixed;
-    background-color: transparent;
-    height: 4rem;
-    width: 100vw;
-    z-index: 100;
-    padding-left: 2rem; }
-    .car-page-body nav.scrolled {
-      background-color: rgba(0, 0, 0, 0.8); }
-    .car-page-body nav .nav-items {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start; }
-      .car-page-body nav .nav-items .nav-link {
-        margin-right: 2rem;
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        color: #ffef00;
-        border-bottom: 1px solid transparent;
-        transition: all .3s ease-in; }
-        .car-page-body nav .nav-items .nav-link:hover {
-          border-bottom-color: #ffef00; }
   .car-page-body .showcase {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/lamborghini/showcase-bg.jpg") no-repeat center center/cover;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,6 +60,17 @@ img {
     .car-page-body .showcase .loading-text {
       color: #fff;
       font-size: 4rem; }
+    .car-page-body .showcase .showcase-content {
+      display: none; }
+      .car-page-body .showcase .showcase-content.show {
+        display: inline; }
+      .car-page-body .showcase .showcase-content h1 {
+        color: #fff;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        text-align: center; }
+        .car-page-body .showcase .showcase-content h1 span {
+          color: #ffef00; }
   .car-page-body .quote-section {
     height: 70vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/lamborghini/ferruccio.jpg") no-repeat center center/cover;
@@ -118,6 +106,72 @@ img {
         transition: all .2s ease-in-out; }
         .car-page-body .footer .social-links a:hover {
           color: #ffef00; }
+
+.cp-container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem; }
+
+.car-page-body {
+  background-color: #333; }
+  .car-page-body .showcase.ferrari {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/ferrari/showcase-bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    filter: blur(0px); }
+  .car-page-body .showcase .loading-text {
+    color: #fff;
+    font-size: 4rem; }
+  .car-page-body .showcase .showcase-content {
+    display: none; }
+    .car-page-body .showcase .showcase-content.show {
+      display: inline; }
+    .car-page-body .showcase .showcase-content h1 {
+      color: #fff;
+      font-size: 2.6rem;
+      text-transform: uppercase;
+      text-align: center; }
+      .car-page-body .showcase .showcase-content h1 span {
+        color: #ff2800; }
+  .car-page-body .quote-section.ferrari {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/ferrari/enzo.jpeg") no-repeat center center/cover;
+    position: relative;
+    color: #f4f4f4; }
+  .car-page-body .quote-section .cp-container {
+    display: flex;
+    height: 100%; }
+    .car-page-body .quote-section .cp-container .quote-wrapper {
+      margin: auto;
+      text-align: center; }
+      .car-page-body .quote-section .cp-container .quote-wrapper .quote {
+        font-size: 2rem;
+        font-weight: 300;
+        padding: .3rem;
+        position: relative; }
+      .car-page-body .quote-section .cp-container .quote-wrapper .quote-by {
+        display: block;
+        text-align: center;
+        margin-top: 2rem; }
+  .car-page-body .footer {
+    background: #000;
+    height: 4rem; }
+    .car-page-body .footer .social-links {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 3rem; }
+      .car-page-body .footer .social-links a {
+        margin-right: 1rem;
+        color: #fff;
+        transition: all .2s ease-in-out; }
+        .car-page-body .footer .social-links a:hover {
+          color: #ff2800; }
 
 body {
   font-family: 'Roboto', sans-serif;
