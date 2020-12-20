@@ -1,2 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+.cp-container .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  transform: translateX(400%);
+  transition: transform 0.6s ease; }
+  .cp-container .item:nth-of-type(even) {
+    transform: translateX(-400%); }
+  .cp-container .item.show {
+    transform: translateX(0); }
+  .cp-container .item img {
+    height: 30rem;
+    width: 30rem; }
+  .cp-container .item div .heading-group {
+    margin: 0 1rem; }
+    .cp-container .item div .heading-group .heading {
+      text-transform: uppercase;
+      letter-spacing: .5rem; }
+    .cp-container .item div .heading-group .sub-heading {
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #999;
+      letter-spacing: 3px;
+      margin-bottom: 1rem; }
+  .cp-container .item div .content {
+    margin: 0 1rem; }
+
+.cp-container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem; }
+
+.car-page-body {
+  background-color: #333; }
+  .car-page-body nav {
+    position: fixed;
+    background-color: transparent;
+    height: 4rem;
+    width: 100vw;
+    z-index: 100;
+    padding-left: 2rem; }
+    .car-page-body nav.scrolled {
+      background-color: rgba(0, 0, 0, 0.8); }
+    .car-page-body nav .nav-items {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .car-page-body nav .nav-items .nav-link {
+        margin-right: 2rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: #ffef00;
+        border-bottom: 1px solid transparent;
+        transition: all .3s ease-in; }
+        .car-page-body nav .nav-items .nav-link:hover {
+          border-bottom-color: #ffef00; }
+  .car-page-body .showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/lamborghini/showcase-bg.jpg") no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    filter: blur(0px); }
+    .car-page-body .showcase .loading-text {
+      color: #fff;
+      font-size: 4rem; }
+  .car-page-body .quote-section {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/lamborghini/ferruccio.jpg") no-repeat center center/cover;
+    position: relative;
+    color: #f4f4f4; }
+    .car-page-body .quote-section .cp-container {
+      display: flex;
+      height: 100%; }
+      .car-page-body .quote-section .cp-container .quote-wrapper {
+        margin: auto;
+        text-align: center; }
+        .car-page-body .quote-section .cp-container .quote-wrapper .quote {
+          font-size: 2rem;
+          font-weight: 300;
+          padding: .3rem;
+          position: relative; }
+        .car-page-body .quote-section .cp-container .quote-wrapper .quote-by {
+          display: block;
+          text-align: center;
+          margin-top: 2rem; }
+  .car-page-body .footer {
+    background: #000;
+    height: 4rem; }
+    .car-page-body .footer .social-links {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 3rem; }
+      .car-page-body .footer .social-links a {
+        margin-right: 1rem;
+        color: #fff;
+        transition: all .2s ease-in-out; }
+        .car-page-body .footer .social-links a:hover {
+          color: #ffef00; }
+
 body {
-  background: red; }
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  background-color: #000; }
+  body .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000; }
+    body .container .split.right,
+    body .container .split.left,
+    body .container .split.right::before,
+    body .container .split.left::before {
+      transition: all 1000ms ease-in-out; }
+    body .container .split {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      overflow: hidden; }
+      body .container .split::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); }
+      body .container .split.left {
+        left: 0;
+        background: url("../images/lamborghini/lamborghini-logo.jpg");
+        background-repeat: no-repeat;
+        background-size: 45rem 50rem;
+        background-position: center; }
+        body .container .split.left .btn:hover {
+          background-color: #ffef00;
+          border-color: #ffef00;
+          color: #000; }
+      body .container .split.right {
+        right: 0;
+        background: url("../images/ferrari/ferrari-logo.jpg");
+        background-repeat: no-repeat;
+        background-size: 45rem 50rem;
+        background-position: center; }
+        body .container .split.right .btn:hover {
+          background-color: #ff2800;
+          border-color: #ff2800;
+          color: #000; }
+      body .container .split h1 {
+        font-size: 4rem;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        white-space: nowrap; }
+      body .container .split .btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+        text-decoration: none;
+        color: #fff;
+        border: #fff solid .2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 15rem;
+        padding: 1.5rem; }
+  body .hover-left .left {
+    width: 75%; }
+  body .hover-left .right {
+    width: 25%; }
+  body .hover-right .right {
+    width: 75%; }
+  body .hover-right .left {
+    width: 25%; }

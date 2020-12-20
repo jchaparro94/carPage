@@ -1,0 +1,112 @@
+.cp-container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+.car-page-body {
+  background-color: #333;
+  
+  nav {
+    position: fixed;
+    background-color: transparent;
+    height: 4rem;
+    width: 100vw;
+    z-index: 100;
+    padding-left: 2rem;
+
+    &.scrolled {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .nav-items {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .nav-link {
+        margin-right: 2rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: $lambo-yellow;
+        border-bottom: 1px solid transparent;
+        transition: all .3s ease-in;
+
+        &:hover {
+          border-bottom-color: $lambo-yellow;
+        }
+      }
+    }
+  }
+
+  .showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/lamborghini/showcase-bg.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    filter: blur(0px);
+
+    .loading-text {
+      color: #fff;
+      font-size: 4rem;
+    }
+  }
+
+  .beginnings-section {
+
+  }
+
+  .quote-section {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/lamborghini/ferruccio.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #f4f4f4;
+
+    .cp-container {
+      display: flex;
+      height: 100%;
+
+      .quote-wrapper {
+        margin: auto;
+        text-align: center;
+
+        .quote {
+          font-size: 2rem;
+          font-weight: 300;
+          padding: .3rem;
+          position: relative;
+        }
+        .quote-by {
+          display: block;
+          text-align: center;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: #000;
+    height: 4rem;
+    .social-links {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 3rem;
+
+      a {
+        margin-right: 1rem;
+        color: #fff;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          color: $lambo-yellow;
+        }
+      }
+    }
+  }
+}

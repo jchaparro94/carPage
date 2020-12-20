@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Variables 
+$overlay-color: rgba(0,0,0, 0.7);
+$lambo-yellow: #ffef00;
+$ferrari-red: #ff2800;
+$hover-width: 75%;
+$other-width: 25%;
+$speed: 1000ms;
+$max-width: 1100px;
+
+// General Classes / styles
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.cp-container {
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    transform: translateX(400%);
+    transition: transform 0.6s ease;
+
+    &:nth-of-type(even) {
+      transform: translateX(-400%);
+    }
+
+    &.show {
+      transform: translateX(0);
+    }
+    img {
+      height: 30rem;
+      width: 30rem;
+    }
+    div {
+      .heading-group {
+        margin: 0 1rem;
+        .heading {
+          text-transform: uppercase;
+          letter-spacing: .5rem;
+        }
+        .sub-heading {
+          font-size: 1rem;
+          text-transform: uppercase;
+          color: #999;
+          letter-spacing: 3px;
+          margin-bottom: 1rem;
+        }
+      }
+      .content {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
